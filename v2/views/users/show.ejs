@@ -1,0 +1,25 @@
+<%include ../partials/header%>
+
+<div class="row text-center" style= "margin-top: 20px; ">
+    <div class="col-md-4 col-lg-4 col-sm-4">
+        <div class="card" style="padding-top:5px;">
+        <h3><%= user.firstName + " " + user.lastName%></h3>
+        <img src="<%=user.avatar%>" alt="user profile image" class="img-thumbnail">
+        <div class="caption" style="padding-top:9px;"><a href="mailto:<%=user.email%>"><%=user.email%></a></div>
+        <hr>
+        <p >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    </div>
+    </div>
+    <div class="col-md-8 col-lg-8 col-sm-8">
+        <%campgrounds.forEach(function(campground){%>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+        <img src="<%=campground.image%>" class="img-thumbnail">
+        <div class="caption"><h5><%=campground.name%></h5></div>
+        <p><a href="/campgrounds/<%=campground._id%>" class="btn btn-primary">More Info</a></p>
+    </div>
+    <%});%>
+    </div>
+</div>
+
+
+<%include ../partials/footer%>

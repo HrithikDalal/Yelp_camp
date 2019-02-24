@@ -1,0 +1,19 @@
+.img-thumbnail{
+    padding:0;
+}
+.delete-form{
+    display:inline;
+}
+body{
+  font-family: 'Nunito', sans-serif;
+  background-color: #e8e8e4;
+}
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+.jumbotron{
+    background-color: #003e51;
+    color: white;
+}
